@@ -10,7 +10,10 @@ const host = process.env.HOST || "0.0.0.0"
 const port = process.env.PORT || 8080
 
 app.get('/', (req, res) => {
-    res.json({ message: "Welcome to my API!"})
+    res.json({ 
+        message: "Welcome to my API!",
+        instructions: "/api/posts will point to posts!"
+    })
 })
 
 app.listen(port, () => {
