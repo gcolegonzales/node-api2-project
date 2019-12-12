@@ -9,6 +9,10 @@ app.use('/api/posts/:id/comments', commentRouter)
 const host = process.env.HOST || "0.0.0.0"
 const port = process.env.PORT || 8080
 
+app.get('/', (req, res) => {
+    res.json({ message: "Welcome to my API!"})
+})
+
 app.listen(port, () => {
     console.log(`Server is listening on http://localhost:${port}`)
 })
